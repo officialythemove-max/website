@@ -1,0 +1,78 @@
+/* The Move website. Same colors as the app. System fonts only: no outside requests, no cookies. */
+:root {
+  --night: #0A0F24;
+  --panel: #131A38;
+  --ink: #EEF0FA;
+  --muted: #98A1C4;
+  --flare: #FF4B5C;
+  --paper: #F4EAD5;
+  --line: rgba(238, 240, 250, 0.13);
+  --display: "Avenir Next Condensed", "AvenirNextCondensed-Heavy", "Arial Narrow", "Roboto Condensed", sans-serif-condensed, sans-serif;
+  --body: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--night);
+  color: var(--ink);
+  font: 17px/1.6 var(--body);
+}
+a { color: var(--flare); text-underline-offset: 3px; }
+a:hover { color: var(--paper); }
+
+.top {
+  display: flex; align-items: center; justify-content: space-between; gap: 16px;
+  max-width: 760px; margin: 0 auto; padding: 22px 22px 0;
+}
+.brand { display: flex; align-items: center; gap: 10px; color: var(--ink); text-decoration: none; }
+.brand img { width: 34px; height: 34px; border-radius: 9px; }
+.brand span, h1, h2, .big {
+  font-family: var(--display); font-weight: 900; font-stretch: condensed;
+  text-transform: uppercase; letter-spacing: 0.01em; line-height: 0.98;
+}
+.brand span { font-size: 22px; white-space: nowrap; }
+nav { display: flex; gap: 18px; flex-wrap: wrap; font-size: 15px; }
+nav a { color: var(--muted); text-decoration: none; }
+nav a:hover, nav a[aria-current="page"] { color: var(--ink); }
+
+main { max-width: 760px; margin: 0 auto; padding: 28px 22px 40px; }
+h1 { font-size: clamp(44px, 9vw, 72px); margin: 18px 0 10px; }
+h2 { font-size: 30px; margin: 40px 0 10px; }
+h3 { font-size: 18px; margin: 26px 0 4px; }
+p, ul { margin: 0 0 14px; }
+ul { padding-left: 22px; }
+li { margin-bottom: 8px; }
+.date, .muted { color: var(--muted); }
+.caps { text-transform: uppercase; font-size: 15px; }
+
+.card {
+  background: var(--panel); border: 1px solid var(--line); border-radius: 16px;
+  padding: 18px 20px; margin: 18px 0;
+}
+.card p:last-child { margin-bottom: 0; }
+
+.hero { padding-top: 40px; }
+.hero .big { font-size: clamp(60px, 15vw, 128px); margin: 0; }
+.hero .big em { font-style: normal; color: var(--flare); }
+.lede { font-size: 20px; color: var(--muted); max-width: 520px; margin: 18px 0 26px; }
+.pill {
+  display: inline-block; background: var(--paper); color: var(--night);
+  font-weight: 700; padding: 12px 20px; border-radius: 999px; text-decoration: none;
+}
+.areas { display: flex; gap: 10px; flex-wrap: wrap; margin: 34px 0 0; padding: 0; list-style: none; }
+.areas li { border: 1px solid var(--line); border-radius: 999px; padding: 6px 14px; color: var(--muted); font-size: 15px; margin: 0; }
+
+@media (max-width: 480px) {
+  .top { padding: 18px 18px 0; }
+  nav { gap: 14px; font-size: 14px; }
+  main { padding: 20px 18px 36px; }
+  .brand span { font-size: 20px; }
+}
+
+footer {
+  max-width: 760px; margin: 0 auto; padding: 24px 22px 44px;
+  border-top: 1px solid var(--line); color: var(--muted); font-size: 14px;
+}
+footer p { margin: 0 0 6px; }
+footer a { color: var(--muted); }
