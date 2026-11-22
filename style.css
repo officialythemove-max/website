@@ -60,6 +60,7 @@ li { margin-bottom: 8px; }
   display: inline-block; background: var(--paper); color: var(--night);
   font-weight: 700; padding: 12px 20px; border-radius: 999px; text-decoration: none;
 }
+a.pill:hover { color: var(--night); background: #fff; }
 .areas { display: flex; gap: 10px; flex-wrap: wrap; margin: 34px 0 0; padding: 0; list-style: none; }
 .areas li { border: 1px solid var(--line); border-radius: 999px; padding: 6px 14px; color: var(--muted); font-size: 15px; margin: 0; }
 
